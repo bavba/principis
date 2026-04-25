@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principis</title>
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.8; 
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5vh 5vw;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1.blog-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 500;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -1px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 1.5rem;
+        }
+
+        article {
+            margin-bottom: 5rem;
+        }
+
+        h2.post-title {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            text-align: center; 
+            font-style: normal; 
+        }
+
+        .post-meta {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 3rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+        }
+
+        .post-meta img.avatar {
+            width: clamp(50px, 10vw, 65px);
+            height: clamp(50px, 10vw, 65px);
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px; 
+            border: 1px solid #eaeaea;
+            display: none; 
+        }
+
+        .post-meta .author-details {
+            text-align: center;
+        }
+
+        .post-meta .timestamp {
+            font-size: 0.8rem;
+            color: #888;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .post-content {
+            font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+            text-align: center;
+            color: #1a1a1a;
+            padding: 0 10px;
+        }
+
+        .post-content p {
+            margin-bottom: 2.5rem;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .music-embed {
+            margin-top: 4rem;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 2.5rem;
+            text-align: center;
+            min-height: 152px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 40px 20px;
+            }
+            .post-content {
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="blog-title">Principis</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2 class="post-title">Isomorfisme</h2>
+            
+            <div class="post-meta">
+                <img src="" alt="Avatar" class="avatar" id="github-avatar">
+                <div class="author-details">
+                    <span id="author-name">Escrit per <strong>@usuari</strong></span>
+                    <span class="timestamp">Publicat el 25 d'abril de 2026 a les 02:26 CEST</span>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <p>Existeix una llibertat no demanada que neix en el desert de l'absència. <br>És la nuesa forçosa de qui ja no té on refugiar la mirada i aprèn a sostenir el pols al buit. <br>Una llibertat incòmoda, poblada de records que mai seran futur i de desitjos que s'enfonsen en el pou del que podria haver estat.</p>
+
+                <p>L'amor com a principi d'abundància, una manera de mirar el món que no depèn de qui habita el cor, sinó de la voluntad d'habitar el de l'altre amb autenticitat.</p>
+
+                <p>Hi ha un llegat silenciós en el rastre dels qui marxen, una promesa de felicitat futura que encara no s'albira, però que batega en el record d'un amor pur. <br>On el pes de la pèrdua no es mesura en l'elecció del temps regalat, sinó en la capacitat d'abraçar la impermanència del vincle i en l'honor d'haver celebrat la contingència. <br>Car la transcendència no entén de mitges tintes.</p>
+
+                <p>Hi ha ànimes que només saben existir despullades, en l'entrega més absoluta de qui són.</p>
+
+                <p>És en aquesta fe on el temps i l'espai es tornen relatius, a l'espera d'un retorn on la lleialtat torni a ser l'única pàtria possible.</p>
+            </div>
+
+            <div class="music-embed">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/19drXdhyX2bzm2zNMQRwBk?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        (function() {
+            const hostname = window.location.hostname;
+            const parts = hostname.split('.');
+            let username = "github"; 
+            
+            if (parts.length >= 3 && parts[1] === 'github' && parts[2] === 'io') {
+                username = parts[0];
+            }
+
+            const userImageUrl = `https://github.com/${username}.png`;
+            const avatarImg = document.getElementById('github-avatar');
+            avatarImg.src = userImageUrl;
+            avatarImg.style.display = 'block';
+
+            const authorName = document.getElementById('author-name');
+            if (username !== "github") {
+                authorName.innerHTML = `Escrit per <strong>@${username}</strong>`;
+            } else {
+                authorName.innerHTML = `Escrit per <strong>@github</strong>`;
+            }
+        })();
+    </script>
+
+</body>
+</html>
